@@ -1,5 +1,5 @@
-def call(String imageName , String imageTag , String dockerHubUser){
+def call(String imageName , String imageTag ){
   echo "docker image creation started"
-  sh "docker build -t ${dockerHubUser}/${imageName}:${imageTag} ." //As we are using shell (sh) here so to use variables we need to use this syntax ${}
+  sh "docker build -t ${imageName}:${imageTag} ." //As we are using shell (sh) here so to use variables we need to use this syntax ${}
   echo "docker image created"
 }
