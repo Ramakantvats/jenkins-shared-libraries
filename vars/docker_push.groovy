@@ -5,4 +5,6 @@ def call(){
   sh " docker image tag django-image:latest ${env.dockerHubUser}/django-image:latest" //changing the name of the image as it is needed to change so that we can push it on dockerhub <username>/imageName:imageTag
   sh "docker push ${env.dockerHubUser}/django-image:latest " //Now pushing the image on docker hub
   echo "Image pushed successfully.."
+  }
 }
+  
